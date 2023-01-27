@@ -1,0 +1,1 @@
+export type Variants = "Linear" | "Outline" | "Broken" | "Bold" | "Bulk" | "TwoTone" | undefined

@@ -1,0 +1,148 @@
+.nav {
+  background: var(--forestgreencrayola);
+  position: fixed;
+  height: 100vh;
+  overflow: hidden;
+  transition: .5s;
+  z-index: 100;
+}
+
+.navActive {
+  width: 100vw;
+}
+
+.navDisabled {
+  width: 0;
+}
+
+.toggle {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.list {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  transition: .5s;
+}
+
+.listActive {
+  width: 100%;
+}
+
+.listDisabled {
+  width: 0;
+}
+
+.item {
+  position: relative;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.icon {
+  color: var(--darkspringgreen);
+  width: 32px;
+  height: 32px;
+}
+
+.iconDisabled {
+  color: var(--forestgreencrayola);
+}
+
+.itemName {
+  min-width: 80px;
+  text-align: center;
+  color: var(--darkspringgreen);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main {
+  overflow: auto;
+  position: relative;
+  padding: 24px;
+  height: 100vh;
+  transition: .5s;
+  background: var(--darkspringgreen);
+  color: var(--ligthcyan);
+}
+
+.mainActive {
+  width: 100vw;
+}
+
+.mainDisabled {
+  width: 100vw;
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  .navActive {
+    width: 250px;
+  }
+
+  .navDisabled {
+    width: 100px;
+  }
+
+  .toggle {
+    top: calc(100vh - 48px);
+    right: 0;
+  }
+  
+  .toggleActive {
+    left: calc(250px - 48px);
+  }
+
+  .toggleDisabled {
+    left: calc(34px);
+  }
+
+  .list {
+    overflow: unset;
+    justify-content: flex-start;
+    padding: 32px 0;
+    transition: .5s;
+  }
+
+  .listActive {
+    width: 100%;
+    left: 0;
+  }
+
+  .listDisabled {
+    width: 100%;
+    left: calc(50% + 16px);
+  }
+
+  .mainActive {
+    left: 250px;
+    width: calc(100vw - 250px);
+  }
+
+  .mainDisabled {
+    left: 100px;
+    width: calc(100vw - 100px);
+  }
+
+  .iconDisabled {
+    color: var(--darkspringgreen);
+  }
+
+}
